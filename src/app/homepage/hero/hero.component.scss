@@ -1,0 +1,30 @@
+.hero {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 90vw;
+    max-height: 85vh;
+  }
+
+  .text {
+    z-index: 2;
+    position: absolute;
+
+    #hero-title {
+        font-size: clamp(85px, 10vw, 150px);
+        margin: 0;
+        line-height: clamp(75px, 8vw, 140px);
+    }
+
+    #hero-subtitle {
+        font-size: clamp(28px, 3vw, 48px);
+        line-height: clamp(18px, 2vw, 38px);
+        margin: 0;
+        text-align: right;
+        color: var(--primary-color);
+    }
+  }
+}

@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
 
+  phrase: string = "cat enthusiast"
+  phraseOptions: string[] = ["cat enthusiast", "programmer", "plant owner", "piano player"];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.phrase = this.phraseOptions[Math.floor(Math.random() * this.phraseOptions.length)];
   }
 
 }
