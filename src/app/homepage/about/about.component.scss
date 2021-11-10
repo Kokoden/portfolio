@@ -1,0 +1,42 @@
+.intro {
+    margin: 3vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    .size {
+        width: 600px;
+
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            h1 {
+                margin: 0;
+                color: var(--primary-color);
+                font-size: 1.5rem;
+            }
+
+            .smile {
+                width: 75px;
+                margin-right: 3vw;
+                margin-top: 3vh;
+            }
+        }
+
+        p {
+            font-family: 'Open-Sans', sans-serif;
+            font-size: clamp(14px, 2vw, 18px);
+            font-weight: 500;
+            line-height: 1.5em;
+        }
+    }
+
+    @media only screen and (max-width: 1595px) {
+        .size {
+            width: 80vw;
+        }
+    }
+}
