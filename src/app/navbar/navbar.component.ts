@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
     { name: 'playground', route: '/playground' }
   ];
 
+  mobile: boolean = window.innerWidth <= 540;
   activePage: string = '';
 
   constructor(private router: Router) { }
@@ -24,6 +25,15 @@ export class NavbarComponent implements OnInit {
         this.activePage = event.urlAfterRedirects.split('/')[1];
       }
     });
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.mobile = window.innerWidth <= 540;
+  }
+
+  openMobileMenu() {
+    
   }
 
 }

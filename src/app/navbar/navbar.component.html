@@ -1,10 +1,14 @@
 <div class="navigation">
+  <div *ngIf="mobile" class="menu">
+    <img src="/assets/icons/menu.svg" (click)="openMobileMenu()"/>
+  </div>
   <p>EDEN<span class="green">.</span></p>
-  <ul class="links">
-    <li *ngFor="let link of navLinks">
-      <a [ngClass]="{'active': link.name === activePage}" [routerLink]="link.route">
-        {{link.name.toUpperCase()}}
-      </a>
-    </li>
-  </ul>
+    <ul *ngIf="!mobile" class="links mobile">
+      <li *ngFor="let link of navLinks">
+        <a [ngClass]="{'active': link.name === activePage}" [routerLink]="link.route">
+          {{link.name.toUpperCase()}}
+        </a>
+      </li>
+    </ul>
+  <div *ngIf="mobile"></div>
 </div>

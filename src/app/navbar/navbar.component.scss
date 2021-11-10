@@ -12,8 +12,9 @@
     text-align: center;
   }
 
-  .green {
-    color: var(--primary-color);
+  .menu {
+    display: flex;
+    justify-content: flex-start;
   }
 
   ul {
